@@ -6,7 +6,7 @@ function Header(props) {
   return (
     <div id="header">
       <div class="container">
-        <a id="title">TenCSS</a>
+        <a id="logo"><img src="logo.svg"></img></a>        
         <Navbar />
       </div>
     </div>

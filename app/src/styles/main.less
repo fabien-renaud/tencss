@@ -1,5 +1,8 @@
-@bg-color1: #333;
-@text-color: #fff;
+@title-color: #303d48;
+@text-color: #555;
+
+@bg-color1: #303d48;
+@title-color1: #fff;
 @text-color1: #ccc;
 
 body {
@@ -9,6 +12,10 @@ body {
   min-height: 100%;
   color: @text-color;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: @title-color;
 }
 
 .container {
@@ -21,17 +28,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: .25em;
-  font-size: 14px;
-}
-
-li ~ li::before {
-  content: '|';
-  padding: 0 .3em 0 .1em;
-}
-
 /* === HEADER STYLE === */
 #header {
   background: @bg-color1;
@@ -39,9 +35,13 @@ li ~ li::before {
   text-align: center;
 }
 
-#title {
-  color: @text-color;
-  font-size: 3em;
+#logo {
+  display: block;
+  padding: 20px 0 10px 0;
+}
+
+#logo img {
+  max-width: 200px;
 }
 
 /* === NAVBAR STYLE === */
@@ -59,8 +59,48 @@ nav ul li {
   position: relative;
 }
 
-nav ul li a { 
+nav ul li a {
+  position: relative;
   margin: 0 8px;
+}
+
+nav ul li ~ li::before {
+  content: '|';
+  padding: 0 .3em 0 .1em;
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: @text-color1;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+nav ul li a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+nav ul li.active:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  position: absolute;
+  border-top-color: @bg-color1;
+  border-width: 14px;
+  margin-left: -7px;
 }
 
 /* === FOOTER STYLE === */
@@ -72,4 +112,10 @@ nav ul li a {
   width: 100%;
   bottom: 0;
   padding: 1em 20px;
+}
+
+#footer p {
+  margin-top: 0;
+  margin-bottom: .25em;
+  font-size: 14px;
 }

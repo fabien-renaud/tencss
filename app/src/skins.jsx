@@ -11,8 +11,8 @@ class Index extends React.Component {
       <div>
         <Header />
         <div class="container">
-          <h1>Welcome to TenCSS !</h1>
-          <p>Have a good time !</p>
+          <h1>Skins</h1>
+          <p>Here you'll find somes CSS Styles for your Website !</p>
         </div>
         <Footer />
       </div>
