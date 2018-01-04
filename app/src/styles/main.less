@@ -1,0 +1,75 @@
+@bg-color1: #333;
+@text-color: #fff;
+@text-color1: #ccc;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro";
+  min-height: 100%;
+  color: @text-color;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: .25em;
+  font-size: 14px;
+}
+
+li ~ li::before {
+  content: '|';
+  padding: 0 .3em 0 .1em;
+}
+
+/* === HEADER STYLE === */
+#header {
+  background: @bg-color1;
+  color: @text-color1;
+  text-align: center;
+}
+
+#title {
+  color: @text-color;
+  font-size: 3em;
+}
+
+/* === NAVBAR STYLE === */
+
+nav ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+nav ul li a { 
+  margin: 0 8px;
+}
+
+/* === FOOTER STYLE === */
+
+#footer {
+  background: @bg-color1;
+  color: @text-color1;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 1em 20px;
+}
