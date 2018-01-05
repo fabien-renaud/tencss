@@ -4,11 +4,11 @@ const http = require('http');
 
 const app = express();
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/app/public/index.html'));
-});
+app.use('/public', express.static(__dirname + '/app/public'));
 
-app.use('/', express.static(__dirname + '/app/public'));
+app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname + '/app/index.html'));
+});
 
 //Get environment port or use 3000
 const port = process.env.PORT || '3000';

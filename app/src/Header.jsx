@@ -1,16 +1,38 @@
 import React from 'react';
 
-import Navbar from './Navbar.jsx';
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: this.props.location.pathname,
+    }
+  }
 
-function Header(props) {
-  return (
-    <div id="header">
-      <div class="container">
-        <a id="logo"><img src="logo.svg"></img></a>        
-        <Navbar />
+  isActive(path) {
+    return this.state.active === "/" + path ? "active" : "no";
+  }
+
+  render() {
+    return (
+      <div id="header">
+        <div className="container">
+          <a href="/" id="logo"><img src="public/logo.svg"></img></a>
+            <nav>
+              <ul>
+                <li className={this.isActive("")}>
+                  <a href="/">WELCOME</a></li>
+                <li className={this.isActive("skins")}>
+                  <a href="/skins">SKINS</a></li>
+                <li className={this.isActive("about")}>
+                  <a href="/about">ABOUT</a></li>
+                <li className={this.isActive("contact")}>
+                  <a href="/contact">CONTACT</a></li>
+              </ul>
+            </nav>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Header;

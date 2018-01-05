@@ -3,7 +3,7 @@ import React from 'react';
 function Footer(props) {
   return (
     <div id="footer">
-      <div class="container">
+      <div className="container">
         <h3>LINUX FOUNDATION COLLABORATIVE PROJECTS</h3>
         <p>© 2018 Node.js Foundation. All Rights Reserved. Portions of this site originally © 2018 Joyent.</p>
         <p>Node.js is a trademark of Joyent, Inc. and is used with its permission. Please review the Trademark Guidelines of the Node.js Foundation.</p>

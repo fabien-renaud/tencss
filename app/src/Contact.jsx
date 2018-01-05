@@ -5,8 +5,10 @@ class Skins extends React.Component {
     return (
       <div>
         <div className="container">
-          <h1>Skins</h1>
-          <p>Here you'll find somes CSS Styles for your Website !</p>
+          <h1>Contact</h1>
+          <p>Fabien RENAUD</p>
+          <p>Mail: frd.frenaud@gmail.com</p>
+          <p>Tel: 06 XX XX XX XX</p>
         </div>
       </div>
     );
