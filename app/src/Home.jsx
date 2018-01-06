@@ -4,10 +4,8 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <div className="container">
-          <h1>Welcome to TenCSS !</h1>
-          <p>Have a good time !</p>
-        </div>
+        <h1>Welcome to TenCSS !</h1>
+        <p>Have a good time !</p>
       </div>
     );
   }

@@ -1,0 +1,100 @@
+@title-color: #303d48;
+@text-color: #555;
+
+@bg-color1: #303d48;
+@second-color1: #54718c;
+@title-color1: #fff;
+@text-color1: #ccc;
+
+.has-side-nav {
+  margin-left: 220px;
+  display: block;
+}
+
+/* === ASIDE BAR === */
+
+aside {
+  display: block;
+  width: 200px;
+  margin-right: 20px;
+  float: left;
+}
+
+aside ul {
+  margin: 0;
+  padding: 0;
+}
+
+aside ul li {
+  padding: .1em .5em;
+  font-size: 18px;
+  margin-bottom: 0.1em;
+}
+
+aside ul li a {
+  display: block;
+  margin: 0 -10px;
+  padding: 2px 10px;
+}
+
+aside ul li.active, aside ul li.active:hover {
+  background: @bg-color1;
+  box-shadow: none;
+}
+
+aside ul li.active a, aside ul li:hover a{
+  color: #fff;
+}
+
+aside ul li:hover {
+  box-shadow: inset 300px 0 0 0 @second-color1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s linear;
+}
+
+/* === SKIN ITEM === */
+
+.skinItem {
+  display: block;
+  padding: 15px 20px 10px 20px;
+  margin-bottom: 15px;
+  color: @text-color1;
+  border-radius: 5px 25px;
+}
+
+.skinItem:nth-child(odd) {
+  background: @bg-color1;
+}
+
+.skinItem:nth-child(even) {
+  background: @second-color1;
+}
+
+.skinItem h3 {
+  padding: 0;
+  margin: 0;
+  color: @title-color1;
+}
+
+.listButtons {
+  text-align: right;
+}
+
+.listButtons button {
+  display: inline-block;
+  padding: .3rem;
+  margin-left: 0.5rem;
+  // font-weight: 400;
+  // text-align: center;
+  // vertical-align: middle;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+}
+
+.listButtons button img {
+  text-align: center;
+  vertical-align: middle;
+  width: 1.4em;
+}

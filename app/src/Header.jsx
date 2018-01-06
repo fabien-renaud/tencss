@@ -9,7 +9,7 @@ class Header extends React.Component {
   }
 
   isActive(path) {
-    return this.state.active === "/" + path ? "active" : "no";
+    return this.state.active.startsWith("/" + path) ? "active" : "";
   }
 
   render() {
@@ -19,7 +19,7 @@ class Header extends React.Component {
           <a href="/" id="logo"><img src="public/logo.svg"></img></a>
             <nav>
               <ul>
-                <li className={this.isActive("")}>
+                <li className={this.state.active === "/" ? "active" : ""}>
                   <a href="/">WELCOME</a></li>
                 <li className={this.isActive("skins")}>
                   <a href="/skins">SKINS</a></li>
