@@ -41,6 +41,14 @@ class Skins extends React.Component {
           <Item id="2" name="Second Theme" />
           <Item id="3" name="Third Theme" />
           <Item id="4" name="Fourth Theme" />
+          <Item id="1" name="Main Theme" />
+          <Item id="2" name="Second Theme" />
+          <Item id="3" name="Third Theme" />
+          <Item id="4" name="Fourth Theme" />
+          <Item id="1" name="Main Theme" />
+          <Item id="2" name="Second Theme" />
+          <Item id="3" name="Third Theme" />
+          <Item id="4" name="Fourth Theme" />
         </div>
       </div>
     );

@@ -14,7 +14,7 @@ render(
   <Router>
     <div id="root">
       <Route path="/" component={Header} />
-      <div className="container">
+      <div id="root-body" className="container">
         <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/skins" component={Skins} />

@@ -5,16 +5,14 @@
 @title-color1: #fff;
 @text-color1: #ccc;
 
-body, html {
+html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
-  min-height: 100vh;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Source Sans Pro";
-  min-height: 100%;
   color: @text-color;
   overflow-x: hidden;
 }
@@ -22,6 +20,10 @@ body {
 #root {
   position:relative;
   min-height:100%;
+}
+
+#root-body {
+  padding-bottom: 192px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -124,10 +126,14 @@ nav ul li.active:after {
   background: @bg-color1;
   color: @text-color1;
   position: absolute;
+  height: 160px;
   width: 100%;
   bottom: 0;
-  margin-top: 2em;
   padding: 1em 20px;
+}
+
+#footer h3 {
+  color: @text-color1;
 }
 
 #footer p {
